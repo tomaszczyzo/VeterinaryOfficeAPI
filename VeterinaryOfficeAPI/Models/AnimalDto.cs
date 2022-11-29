@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VeterinaryOfficeAPI.Entities
+namespace VeterinaryOfficeAPI.Models
 {
-    public class Animal
+    public class AnimalDto
     {
         public int Id { get; set; }
         public string Species { get; set; }
@@ -16,11 +16,10 @@ namespace VeterinaryOfficeAPI.Entities
         public string Color { get; set; }
         public string Size { get; set; }
         public decimal Weight { get; set; }
-        
-        public int OwnerId { get; set; }
-        public virtual Owner Owner { get; set; }
-        public virtual Visit Visit { get; set; }
-
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public DateTime FirstVisit { get; set; }
+        public DateTime LastVisit { get; set; }
     }
 }
